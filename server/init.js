@@ -1,8 +1,6 @@
 const app = require('./server.js');
-const debug = require('debug')('react-redux-node-express-todo-list-boilerplate:server');
+const debug = require('debug')('portfolio-site:server');
 const http = require('http');
-// uncomment if implementing socket.io
-// const io = require('../lib/io');
 
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
@@ -10,8 +8,6 @@ app.set('port', port);
 const server = http.createServer(app);
 
 let listener = server.listen(port);
-// uncomment if implementing socket.io
-// io.attach(listener);
 
 server.on('error', onError);
 server.on('listening', onListening);

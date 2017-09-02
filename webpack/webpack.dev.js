@@ -3,7 +3,6 @@ const webpackMerge = require('webpack-merge');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const commonConfig = require('./webpack.common.js');
 const helpers = require('../helpers');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = webpackMerge(commonConfig, {
     devtool: 'eval-source-map',
@@ -29,10 +28,7 @@ module.exports = webpackMerge(commonConfig, {
     plugins: [
         new WebpackNotifierPlugin({
             alwaysNotify: true
-        }),
-        new HtmlWebpackPlugin({
-            template: './client/index.html'
-        }),
+        })
     ],
     devServer: {
         historyApiFallback: true,

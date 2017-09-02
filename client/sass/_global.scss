@@ -1,5 +1,10 @@
 @import './variables';
 
+body {
+  background: $grey;
+  font-family: 'Titillium Web', sans-serif;
+}
+
 .margin-left-sm {
     margin-left: 5px;
 }
@@ -7,4 +12,3 @@
 .margin-center {
     margin: 0 auto;
 }
-

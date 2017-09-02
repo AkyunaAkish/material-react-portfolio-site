@@ -1,3 +1,4 @@
+require('dotenv').config();
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const helpers = require('../helpers');
@@ -20,7 +21,7 @@ module.exports = {
             },
             {
                 test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)(\?.*$|$)/,
-                loader: `file-loader?name=assets/[name]${dev ? '' : '.[hash]'}.[ext]`
+                loader: `url-loader`
             }
         ]
     },

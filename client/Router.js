@@ -1,9 +1,8 @@
-import React, {PureComponent} from 'react';
-import {BrowserRouter, Route, Redirect, Switch} from 'react-router-dom';
+import React, { PureComponent } from 'react';
+import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
 
-import TodosNew from './components/TodosNew/TodosNew';
-import TodoShow from './components/TodoShow/TodoShow';
-import Todos from './components/Todos/Todos';
+import TopNav from './components/TopNav/TopNav';
+import Landing from './components/Landing/Landing';
 
 class Router extends PureComponent {
     constructor(props) {
@@ -14,10 +13,10 @@ class Router extends PureComponent {
         return (
             <BrowserRouter>
                 <div>
+                    <TopNav />
+                    
                     <Switch>
-                        <Route path='/todos/new' component={TodosNew}/>
-                        <Route path='/todos/:id' component={TodoShow}/>
-                        <Route exact path='/' component={Todos}/>
+                        <Route exact path='/' component={ Landing }/>
                         <Redirect from='*' to='/'/>
                     </Switch>
                 </div>
