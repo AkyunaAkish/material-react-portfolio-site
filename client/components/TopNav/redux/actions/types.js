@@ -1,0 +1,1 @@
+export const TOGGLE_MOBILE_VIEW = 'TOGGLE_MOBILE_VIEW';

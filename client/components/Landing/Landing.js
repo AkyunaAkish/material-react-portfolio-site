@@ -8,7 +8,7 @@ class Landing extends PureComponent {
   render() {
     return (
       <div className='landing-container'>
-        <h1>Landing Quicksand</h1>
+        <h1>Landing</h1>
       </div>
     );
   }

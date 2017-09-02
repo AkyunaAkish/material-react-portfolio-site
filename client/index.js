@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import Router from './Router';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
 
 import 'bootstrap-loader';
-import './sass/style.scss';
-import Router from './Router';
+import './sass/rootStyle.scss';
+
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 const muiTheme = getMuiTheme({
   palette: {
@@ -16,13 +19,13 @@ const muiTheme = getMuiTheme({
     pickerHeaderColor: 'rgb(0, 167, 245)',
   },
   appBar: {
-    height: 72,
-    textColor: 'rgb(0, 167, 245)'
+    height: 72
   },
 });
 
-
 ReactDOM.render(
-  <MuiThemeProvider muiTheme={ muiTheme }>
-    <Router/>
-  </MuiThemeProvider>, document.querySelector('#app'));
+  <Provider store={ store }>
+    <MuiThemeProvider muiTheme={ muiTheme }>
+      <Router/>
+    </MuiThemeProvider>
+  </Provider>, document.querySelector('#app'));
