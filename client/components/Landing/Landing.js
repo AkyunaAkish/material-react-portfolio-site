@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import BioHeader from '../BioHeader/BioHeader.js';
 
 class Landing extends PureComponent {
   constructor(props) {
@@ -8,7 +9,7 @@ class Landing extends PureComponent {
   render() {
     return (
       <div className='landing-container'>
-        <h1>Landing</h1>
+        <BioHeader />
       </div>
     );
   }

@@ -1,4 +1,6 @@
 .top-nav {
+  position: fixed;
+  top: 0;
 
   .top-nav-logo-link {
     &:hover {
@@ -10,7 +12,6 @@
     }
   }
 
-
   .top-nav-tabs {
     .top-nav-tab {
       height: 72px;
@@ -18,8 +19,20 @@
     }
   }
 
+  .hamburger {
+    .hamburger-inner {
+      background-color: $blue;
 
-    // @media (max-width: 700px) {
-    //
-    // }
+      &::before {
+        background-color: $blue;
+      }
+
+      &::after {
+        background-color: $blue;
+      }
+    }
+  }
+  // @media (max-width: 700px) {
+  //
+  // }
 }

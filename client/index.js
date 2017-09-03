@@ -6,6 +6,7 @@ import { store } from './redux/store';
 
 import 'bootstrap-loader';
 import './sass/rootStyle.scss';
+import 'hamburgers/dist/hamburgers.min.css';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
